@@ -912,7 +912,7 @@ export class DevGeniusStack extends cdk.Stack {
 
     private addTags() {
         cdk.Tags.of(this).add("project", "DevGenius")
-        cdk.Tags.of(this).add("repo", "https://gitlab.aws.dev/rengark/devgenius-probe")
+        cdk.Tags.of(this).add("repo", "https://github.com/aws-samples/sample-devgenius-aws-solution-builder")
     }
 
     private addOutputs() {
