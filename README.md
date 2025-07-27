@@ -78,8 +78,8 @@ DevGenius is built using a modern cloud-native architecture:
   "CONVERSATION_TABLE_NAME": "DevGenius-ConversationTable",
   "FEEDBACK_TABLE_NAME": "DevGenius-FeedbackTable",
   "SESSION_TABLE_NAME": "DevGenius-SessionTable"
+  }'
   ```
-}'
 
 
 4. Run the application:
