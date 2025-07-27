@@ -80,7 +80,40 @@ DevGenius is built using a modern cloud-native architecture:
   "SESSION_TABLE_NAME": "DevGenius-SessionTable"
   }'
   ```
+```bash
+ You Need to Create These DynamoDB Tables First
+Here are the 3 tables and their required structure:
 
+1. DevGenius-ConversationTable
+Used to store chat history/session data.
+
+aws dynamodb create-table \
+  --table-name DevGenius-ConversationTable \
+  --attribute-definitions AttributeName=session_id,AttributeType=S \
+  --key-schema AttributeName=session_id,KeyType=HASH \
+  --billing-mode PAY_PER_REQUEST \
+  --region us-west-2
+
+2. DevGenius-FeedbackTable
+Stores user feedback on the AI responses.
+
+aws dynamodb create-table \
+  --table-name DevGenius-FeedbackTable \
+  --attribute-definitions AttributeName=conversation_id,AttributeType=S \
+  --key-schema AttributeName=conversation_id,KeyType=HASH \
+  --billing-mode PAY_PER_REQUEST \
+  --region us-west-2
+
+3. DevGenius-SessionTable
+Tracks active sessions and status.
+
+aws dynamodb create-table \
+  --table-name DevGenius-SessionTable \
+  --attribute-definitions AttributeName=session_id,AttributeType=S \
+  --key-schema AttributeName=session_id,KeyType=HASH \
+  --billing-mode PAY_PER_REQUEST \
+  --region us-west-2
+```
 
 4. Run the application:
 
