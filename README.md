@@ -70,14 +70,15 @@ DevGenius is built using a modern cloud-native architecture:
    export FEEDBACK_TABLE_NAME="<REPLACE_ME_FEEDBACK_TABLE_NAME>"
    export SESSION_TABLE_NAME="<REPLACE_ME_SESSION_TABLE_NAME>"
    ```
-
-export AWS_RESOURCE_NAMES_PARAMETER='{
+  ```bash
+  export AWS_RESOURCE_NAMES_PARAMETER='{
   "S3_BUCKET_NAME": "devgeniusproject",
   "BEDROCK_AGENT_ID": "xxxxxx",
   "BEDROCK_AGENT_ALIAS_ID": "xxxx",
   "CONVERSATION_TABLE_NAME": "DevGenius-ConversationTable",
   "FEEDBACK_TABLE_NAME": "DevGenius-FeedbackTable",
   "SESSION_TABLE_NAME": "DevGenius-SessionTable"
+  ```
 }'
 
 
